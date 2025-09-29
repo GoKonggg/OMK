@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat Jalan Management - Omaku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="owner-dashboard.html" class="logo">OM<span>A</span>KU</a>
+            </div>
+            <ul class="sidebar-nav">
+                <li><a href="owner-dashboard.html">Dashboard</a></li>
+                <li><a href="owner-pipeline.html">Sales Pipeline</a></li>
+                <li><a href="owner-surat-jalan.html" class="active">Surat Jalan</a></li>
+                <li><a href="owner-partners.html">Partners</a></li>
+                <li><a href="owner-analytics.html">Analytics</a></li>
+                <li><a href="owner-settings.html">Settings</a></li>
+            </ul>
+        </aside>
+
+        <div class="main-content">
+            <header class="app-header">
+                <h1>Surat Jalan Management</h1>
+                <div class="user-profile">
+                    <span>Welcome, Admin!</span>
+                </div>
+            </header>
+
+            <main class="content-body">
+                <div class="card">
+                    <div class="page-header">
+                        <h2>All Delivery Orders</h2>
+                        <button class="btn btn-primary">Create New Surat Jalan</button>
+                    </div>
+
+                    <div class="filters">
+                        <input type="search" placeholder="Search by Order ID or Client...">
+                        <select name="status">
+                            <option value="">All Statuses</option>
+                            <option value="draft">Draft</option>
+                            <option value="delivery">On Delivery</option>
+                            <option value="delivered">Delivered</option>
+                            <option value="cancelled">Cancelled</option>
+                        </select>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>SJ Number</th>
+                                    <th>Order ID</th>
+                                    <th>Client Name</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>SJ-202509-001</td>
+                                    <td>#ORD-00130</td>
+                                    <td>Custom Kitchen Set</td>
+                                    <td>Sep 30, 2025</td>
+                                    <td><span class="status status-delivery">On Delivery</span></td>
+                                    <td class="action-buttons">
+                                        <a href="#" class="btn btn-secondary btn-sm">Details</a>
+                                        <a href="#" class="btn btn-secondary btn-sm">Print PDF</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>SJ-202509-002</td>
+                                    <td>#ORD-00128</td>
+                                    <td>Hotel Lobby Renovation</td>
+                                    <td>Sep 29, 2025</td>
+                                    <td><span class="status status-paid">Delivered</span></td>
+                                     <td class="action-buttons">
+                                        <a href="#" class="btn btn-secondary btn-sm">Details</a>
+                                        <a href="#" class="btn btn-secondary btn-sm">Print PDF</a>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td>SJ-202509-003</td>
+                                    <td>#ORD-00125</td>
+                                    <td>PT Maju Mundur</td>
+                                    <td>Sep 28, 2025</td>
+                                    <td><span class="status status-draft">Draft</span></td>
+                                     <td class="action-buttons">
+                                        <a href="#" class="btn btn-secondary btn-sm">Details</a>
+                                        <a href="#" class="btn btn-secondary btn-sm">Print PDF</a>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td>SJ-202509-004</td>
+                                    <td>#ORD-00124</td>
+                                    <td>Reseller Furniture #5</td>
+                                    <td>Sep 27, 2025</td>
+                                    <td><span class="status status-paid">Delivered</span></td>
+                                     <td class="action-buttons">
+                                        <a href="#" class="btn btn-secondary btn-sm">Details</a>
+                                        <a href="#" class="btn btn-secondary btn-sm">Print PDF</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>

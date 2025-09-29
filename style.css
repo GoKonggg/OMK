@@ -1,0 +1,869 @@
+/* === FONDASI & VARIABEL === */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
+
+:root {
+    --primary-color: #dc3545;
+    --dark-color: #212529;
+    --secondary-text-color: #6c757d;
+    --background-color: #f8f9fa;
+    --white-color: #FFFFFF;
+    --border-color: #DEE2E6;
+    --font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+/* === KOMPONEN UTILITY & REUSABLE === */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn-primary:hover {
+    background-color: #c82333;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--dark-color);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--background-color);
+}
+
+.card {
+    background: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* === HEADER / NAVIGASI === */
+/* === HEADER / NAVIGASI (DYNAMIC) === */
+.navbar {
+    /* --- EDITED --- */
+    position: fixed; /* Changed from sticky to make it overlay the hero */
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent; /* Changed from white to transparent */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added for smooth effect */
+    border-bottom: 1px solid transparent; /* Changed to start transparent */
+    /* --- UNCHANGED --- */
+    padding: 1rem 0;
+    z-index: 10;
+}
+
+/* --- NEW CLASS (Added for JavaScript) --- */
+/* This style is applied when the user scrolls down */
+.navbar.scrolled {
+    background-color: var(--white-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+.navbar-logo span {
+    color: var(--primary-color);
+}
+
+.navbar-menu .btn {
+    margin-left: 1rem;
+}
+
+
+/* === HERO SECTION (ADJUSTED) === */
+.hero {
+    /* --- EDITED --- */
+    padding-top: 10rem; /* Increased to push content below the fixed navbar */
+    padding-bottom: 6rem;
+    /* --- UNCHANGED --- */
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--secondary-text-color);
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+/* === FORM REGISTRASI === */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.auth-card .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--dark-color);
+    text-decoration: none;
+}
+.auth-card .logo span {
+    color: var(--primary-color);
+}
+
+.auth-card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.auth-card p {
+    color: var(--secondary-text-color);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.form-group .btn {
+    width: 100%;
+    padding: 14px;
+}
+
+.auth-card .extra-link {
+    margin-top: 2rem;
+}
+
+.auth-card .extra-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* === GENERAL SECTION STYLING === */
+.section-light, .section-dark, .cta, .footer {
+    padding: 5rem 0;
+}
+
+.section-light {
+    background-color: var(--white-color);
+}
+
+.section-dark {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--secondary-text-color);
+}
+
+.section-dark .section-header p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* === GRID LAYOUT === */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+
+/* === HOW IT WORKS SECTION === */
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.step {
+    flex: 1;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 1rem auto;
+}
+
+.step-arrow {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .steps-container {
+        flex-direction: column;
+    }
+    .step-arrow {
+        transform: rotate(90deg);
+    }
+}
+
+
+/* === FINAL CTA & FOOTER === */
+.cta {
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta p {
+    margin-bottom: 2rem;
+}
+
+.btn-large {
+    padding: 14px 32px;
+    font-size: 1.1rem;
+}
+
+.footer {
+    background: var(--dark-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+
+/* === NAVBAR & HERO ADJUSTMENTS === */
+.navbar-menu a:not(.btn) {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 600;
+}
+.navbar-menu a:not(.btn):hover {
+    color: var(--primary-color);
+}
+
+/* === APP LAYOUT (POST-LOGIN) === */
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* === SIDEBAR === */
+.sidebar {
+    width: 260px;
+    background-color: var(--dark-color);
+    color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.sidebar-header .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--white-color);
+    text-decoration: none;
+    margin-bottom: 2.5rem;
+    display: block;
+}
+.sidebar-header .logo span {
+    color: var(--primary-color);
+}
+
+.sidebar-nav {
+    list-style: none;
+    flex-grow: 1;
+}
+
+.sidebar-nav li a {
+    display: block;
+    color: #adb5bd;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-nav li a:hover {
+    background-color: #343a40;
+    color: var(--white-color);
+}
+
+.sidebar-nav li a.active {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+
+/* === MAIN CONTENT AREA === */
+.main-content {
+    flex: 1;
+    background-color: var(--background-color);
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--white-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.app-header h1 {
+    font-size: 1.5rem;
+}
+
+.user-profile {
+    font-weight: 600;
+}
+
+.content-body {
+    padding: 2rem;
+}
+
+/* === DASHBOARD WIDGETS === */
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.summary-card {
+    background: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.summary-card .title {
+    font-weight: 600;
+    color: var(--secondary-text-color);
+    font-size: 0.9rem;
+}
+
+.summary-card .value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+.summary-card .detail {
+    color: #28a745; /* Green for positive change */
+    font-size: 0.9rem;
+}
+
+
+/* === FILTERS & TABLE STYLING === */
+.filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.filters input, .filters select {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Ensures table is responsive on small screens */
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.data-table thead th {
+    background-color: var(--background-color);
+    font-weight: 700;
+    color: var(--secondary-text-color);
+}
+
+.data-table tbody tr:hover {
+    background-color: var(--background-color);
+}
+
+/* === STATUS TAGS === */
+.status {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.status-paid {
+    background-color: #e4f8e8;
+    color: #28a745;
+}
+
+.status-pending {
+    background-color: #fff4e5;
+    color: #ff9800;
+}
+
+.status-cancelled {
+    background-color: #fde2e4;
+    color: #dc3545;
+}
+
+/* === LEADERBOARD PAGE === */
+.leaderboard-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.filter-btn-group .btn {
+    border-radius: 0;
+    border-right-width: 0;
+}
+.filter-btn-group .btn:first-child {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.filter-btn-group .btn:last-child {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-right-width: 1px;
+}
+
+.filter-btn-group .btn.active {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-color: var(--primary-color);
+}
+
+/* === Podium for Top 3 === */
+.podium-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.podium-card {
+    width: 200px;
+    padding: 1.5rem 1rem;
+    border: 2px solid var(--border-color);
+    border-bottom-width: 10px;
+    border-radius: 8px;
+    background-color: var(--white-color);
+}
+
+.podium-card .rank {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-text-color);
+    margin-bottom: 1rem;
+}
+
+.podium-card .name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.podium-card .score {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Rank-specific styling */
+.podium-card.rank-2 {
+    order: 1;
+    height: 150px;
+    border-color: #C0C0C0; /* Silver */
+}
+.podium-card.rank-1 {
+    order: 2;
+    height: 180px;
+    border-color: #FFD700; /* Gold */
+    transform: scale(1.05);
+}
+.podium-card.rank-3 {
+    order: 3;
+    height: 120px;
+    border-color: #CD7F32; /* Bronze */
+}
+
+/* Highlight current user in table */
+.data-table .current-user-row {
+    background-color: #fff3cd;
+    font-weight: 700;
+}
+
+
+/* === TOOLS PAGE === */
+.tool-section {
+    margin-bottom: 2rem;
+}
+
+.tool-section h2 {
+    margin-bottom: 0.5rem;
+}
+
+.tool-section p {
+    margin-bottom: 1.5rem;
+    color: var(--secondary-text-color);
+}
+
+.affiliate-link-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.affiliate-link-display {
+    flex-grow: 1;
+    background-color: var(--background-color);
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    color: var(--dark-color);
+}
+
+.qr-code-container {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.qr-code-container img {
+    max-width: 200px;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    background: var(--white-color);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+
+/* === PROFILE PAGE === */
+.profile-section {
+    margin-bottom: 2rem;
+}
+
+
+
+/* === OWNER DASHBOARD === */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.sales-funnel-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.funnel-step {
+    flex: 1;
+}
+
+.funnel-step .value {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.funnel-step .label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--secondary-text-color);
+}
+
+.funnel-arrow {
+    font-size: 1.5rem;
+    color: var(--border-color);
+}
+
+.activity-list {
+    list-style: none;
+}
+
+.activity-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.activity-list li:last-child {
+    border-bottom: none;
+}
+
+
+/* === SALES PIPELINE (KANBAN BOARD) === */
+.pipeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.kanban-board {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto; /* Allows horizontal scrolling */
+    padding-bottom: 1rem;
+    min-height: 60vh;
+}
+
+.kanban-column {
+    flex: 0 0 320px; /* Each column has a fixed width */
+    background-color: var(--background-color);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.kanban-column-header {
+    padding: 1rem;
+    border-bottom: 3px solid;
+    font-weight: 700;
+}
+
+.kanban-column-body {
+    padding: 1rem;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.kanban-card {
+    background: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    cursor: grab;
+}
+
+.kanban-card:active {
+    cursor: grabbing;
+}
+
+.card-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.card-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.card-meta {
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+}
+
+/* Column-specific border colors */
+.col-leads { border-color: #007bff; }
+.col-quotes { border-color: #ffc107; }
+.col-negotiation { border-color: #fd7e14; }
+.col-won { border-color: #28a745; }
+
+
+/* === SURAT JALAN PAGE === */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+/* New Status Tags */
+.status-delivery {
+    background-color: #e1f5fe;
+    color: #0288d1;
+}
+
+.status-draft {
+    background-color: #f1f3f5;
+    color: #495057;
+}
+
+/* Action buttons in tables */
+.action-buttons .btn {
+    margin-right: 0.5rem;
+}
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+
+/* === PARTNER MANAGEMENT PAGE === */
+.partner-info {
+    display: flex;
+    align-items: center;
+}
+
+.partner-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 12px;
+    background-color: var(--border-color);
+}
+
+.status-inactive {
+    background-color: #f1f3f5;
+    color: #495057;
+}
+
+
+/* === ANALYTICS PAGE === */
+.analytics-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.chart-placeholder {
+    width: 100%;
+    height: 350px;
+    background-color: var(--background-color);
+    border: 1px dashed var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-text-color);
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+
+
+
+
+/* === FORM FUNCTIONALITY === */
+.error-message {
+    display: none; /* Hidden by default */
+    background-color: #fde2e4;
+    color: #dc3545;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+}

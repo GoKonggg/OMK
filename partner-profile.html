@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Omaku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="partner-dashboard.html" class="logo">OM<span>A</span>KU</a>
+            </div>
+            <ul class="sidebar-nav">
+                <li><a href="partner-dashboard.html">Dashboard</a></li>
+                <li><a href="partner-commissions.html">Commissions</a></li>
+                <li><a href="partner-leaderboard.html">Leaderboard</a></li>
+                <li><a href="partner-tools.html">Tools</a></li>
+                <li><a href="partner-profile.html" class="active">Profile</a></li>
+            </ul>
+        </aside>
+
+        <div class="main-content">
+            <header class="app-header">
+                <h1>My Profile</h1>
+                <div class="user-profile">
+                    <span>Welcome, Partner!</span>
+                </div>
+            </header>
+
+            <main class="content-body">
+                <div class="card profile-section">
+                    <h2>Personal Information</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" value="Your Partner Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" value="partner@example.com" disabled>
+                        </div>
+                         <div class="form-group">
+                            <label for="business-name">Business Name</label>
+                            <input type="text" id="business-name" name="business-name" value="Partner's Business">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </form>
+                </div>
+
+                <div class="card profile-section">
+                    <h2>Change Password</h2>
+                     <form>
+                        <div class="form-group">
+                            <label for="current-password">Current Password</label>
+                            <input type="password" id="current-password" name="current-password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="new-password">New Password</label>
+                            <input type="password" id="new-password" name="new-password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm New Password</label>
+                            <input type="password" id="confirm-password" name="confirm-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update Password</button>
+                    </form>
+                </div>
+                 <div class="card profile-section">
+                    <h2>Payout Details</h2>
+                     <form>
+                        <div class="form-group">
+                            <label for="bank-name">Bank Name</label>
+                            <select id="bank-name" name="bank-name">
+                                <option>Select Bank...</option>
+                                <option selected>Bank Central Asia (BCA)</option>
+                                <option>Bank Mandiri</option>
+                                <option>Bank Rakyat Indonesia (BRI)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="account-holder">Account Holder Name</label>
+                            <input type="text" id="account-holder" name="account-holder" value="Your Partner Name">
+                        </div>
+                         <div class="form-group">
+                            <label for="account-number">Account Number</label>
+                            <input type="text" id="account-number" name="account-number" value="1234567890">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Payout Info</button>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>

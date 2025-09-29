@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - Omaku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="owner-dashboard.html" class="logo">OM<span>A</span>KU</a>
+            </div>
+            <ul class="sidebar-nav">
+                <li><a href="owner-dashboard.html">Dashboard</a></li>
+                <li><a href="owner-pipeline.html">Sales Pipeline</a></li>
+                <li><a href="owner-surat-jalan.html">Surat Jalan</a></li>
+                <li><a href="owner-partners.html">Partners</a></li>
+                <li><a href="owner-analytics.html" class="active">Analytics</a></li>
+                <li><a href="owner-settings.html">Settings</a></li>
+            </ul>
+        </aside>
+
+        <div class="main-content">
+            <header class="app-header">
+                <h1>Analytics & Reports</h1>
+                <div class="user-profile">
+                    <span>Welcome, Admin!</span>
+                </div>
+            </header>
+
+            <main class="content-body">
+                <div class="analytics-header">
+                    <h2>Business Performance</h2>
+                    <div class="filters">
+                        <label for="date-range" style="margin-right: 0.5rem; font-weight:600;">Date Range:</label>
+                        <input type="date" id="date-range" name="start_date" value="2025-09-01">
+                        <input type="date" name="end_date" value="2025-09-30">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Revenue Over Time (USD)</h2>
+                    <div class="chart-placeholder">
+                        <img src="https://quickchart.io/chart?c={type:'line',data:{labels:['Week 1','Week 2','Week 3','Week 4'], datasets:[{label:'Revenue',data:[5200,8100,7500,11200],fill:false,borderColor:'%23dc3545'}]}}" alt="Revenue Chart" style="max-width: 100%;">
+                    </div>
+                </div>
+
+                <div class="grid-2" style="margin-top: 2rem;">
+                    <div class="card">
+                        <h2>Top Performing Partners</h2>
+                        <div class="table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Partner Name</th>
+                                        <th>Sales (Month)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Michael Chen</td>
+                                        <td>$18,550</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jane Doe</td>
+                                        <td>$15,210</td>
+                                    </tr>
+                                    <tr>
+                                        <td>David Lee</td>
+                                        <td>$14,980</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2>Sales Funnel Conversion</h2>
+                         <ul class="activity-list">
+                            <li><span>Leads to Quotes</span> <span>79%</span></li>
+                            <li><span>Quotes to Orders</span> <span>76%</span></li>
+                            <li><span>Orders to Delivered</span> <span>90%</span></li>
+                            <li style="font-weight: 700;"><span>Overall Conversion</span> <span>54%</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>

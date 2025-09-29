@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tools - Omaku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="partner-dashboard.html" class="logo">OM<span>A</span>KU</a>
+            </div>
+            <ul class="sidebar-nav">
+                <li><a href="partner-dashboard.html">Dashboard</a></li>
+                <li><a href="partner-commissions.html">Commissions</a></li>
+                <li><a href="partner-leaderboard.html">Leaderboard</a></li>
+                <li><a href="partner-tools.html" class="active">Tools</a></li>
+                <li><a href="partner-profile.html">Profile</a></li>
+            </ul>
+        </aside>
+
+        <div class="main-content">
+            <header class="app-header">
+                <h1>My Tools</h1>
+                <div class="user-profile">
+                    <span>Welcome, Partner!</span>
+                </div>
+            </header>
+
+            <main class="content-body">
+                <div class="card tool-section">
+                    <h2>Your Unique Affiliate Link</h2>
+                    <p>Share this link to track leads and earn commissions from your referrals.</p>
+                    <div class="affiliate-link-wrapper">
+                        <div class="affiliate-link-display">https://omaku.com/ref/partner123</div>
+                        <button class="btn btn-primary">Copy Link</button>
+                    </div>
+                </div>
+
+                <div class="card tool-section">
+                    <h2>Promotional QR Code</h2>
+                    <p>Use this QR code on your printed marketing materials like brochures or business cards.</p>
+                    <div class="qr-code-container">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://omaku.com/ref/partner123" alt="Your Affiliate QR Code">
+                        <button class="btn btn-secondary">Download QR Code (PNG)</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>

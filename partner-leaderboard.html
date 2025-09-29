@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard - Omaku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="partner-dashboard.html" class="logo">OM<span>A</span>KU</a>
+            </div>
+            <ul class="sidebar-nav">
+                <li><a href="partner-dashboard.html">Dashboard</a></li>
+                <li><a href="partner-commissions.html">Commissions</a></li>
+                <li><a href="partner-leaderboard.html" class="active">Leaderboard</a></li>
+                <li><a href="partner-tools.html">Tools</a></li>
+                <li><a href="partner-profile.html">Profile</a></li>
+            </ul>
+        </aside>
+
+        <div class="main-content">
+            <header class="app-header">
+                <h1>Leaderboard</h1>
+                <div class="user-profile">
+                    <span>Welcome, Partner!</span>
+                </div>
+            </header>
+
+            <main class="content-body">
+                <div class="leaderboard-filters">
+                    <div class="filter-btn-group">
+                        <a href="#" class="btn btn-secondary active">This Month</a>
+                        <a href="#" class="btn btn-secondary">All Time</a>
+                    </div>
+                    <select name="category">
+                        <option value="sales">By Sales Volume</option>
+                        <option value="leads">By New Leads</option>
+                    </select>
+                </div>
+                
+                <div class="podium-container">
+                    <div class="podium-card rank-2">
+                        <div class="rank">2</div>
+                        <div class="name">Jane Doe</div>
+                        <div class="score">$15,210</div>
+                    </div>
+                    <div class="podium-card rank-1">
+                        <div class="rank">1</div>
+                        <div class="name">Michael Chen</div>
+                        <div class="score">$18,550</div>
+                    </div>
+                    <div class="podium-card rank-3">
+                        <div class="rank">3</div>
+                        <div class="name">David Lee</div>
+                        <div class="score">$14,980</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Full Rankings</h2>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Partner Name</th>
+                                    <th>Sales Volume</th>
+                                    <th>Leads</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Sarah Wilson</td>
+                                    <td>$12,800</td>
+                                    <td>115</td>
+                                </tr>
+                                <tr class="current-user-row">
+                                    <td>5</td>
+                                    <td>You</td>
+                                    <td>$11,500</td>
+                                    <td>98</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Robert Garcia</td>
+                                    <td>$10,950</td>
+                                    <td>95</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Jessica Kim</td>
+                                    <td>$9,800</td>
+                                    <td>88</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>

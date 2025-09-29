@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Dashboard - Omaku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="#" class="logo">OM<span>A</span>KU</a>
+            </div>
+            <ul class="sidebar-nav">
+                <li><a href="owner-dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="owner-pipeline.html">Sales Pipeline</a></li>
+                <li><a href="owner-surat-jalan.html">Surat Jalan</a></li>
+                <li><a href="owner-partners.html">Partners</a></li>
+                <li><a href="owner-analytics.html">Analytics</a></li>
+                <li><a href="owner-settings.html">Settings</a></li>
+            </ul>
+        </aside>
+
+        <div class="main-content">
+            <header class="app-header">
+                <h1>Owner Dashboard</h1>
+                <div class="user-profile">
+                    <span>Welcome, Admin!</span>
+                </div>
+            </header>
+
+            <main class="content-body">
+                <div class="grid-4">
+                    <div class="summary-card">
+                        <div class="title">TOTAL REVENUE (MONTH)</div>
+                        <div class="value">$25,650</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="title">NEW LEADS (MONTH)</div>
+                        <div class="value">124</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="title">ORDERS IN PROGRESS</div>
+                        <div class="value">18</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="title">NEW PARTNERS (MONTH)</div>
+                        <div class="value">5</div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 2rem;">
+                    <h2>Sales Funnel Overview (This Month)</h2>
+                    <div class="sales-funnel-container" style="padding: 1rem 0;">
+                        <div class="funnel-step"><div class="value">124</div><div class="label">Leads</div></div>
+                        <div class="funnel-arrow">→</div>
+                        <div class="funnel-step"><div class="value">98</div><div class="label">Quotes Sent</div></div>
+                        <div class="funnel-arrow">→</div>
+                        <div class="funnel-step"><div class="value">75</div><div class="label">Orders Confirmed</div></div>
+                        <div class="funnel-arrow">→</div>
+                        <div class="funnel-step"><div class="value">68</div><div class="label">Delivered</div></div>
+                    </div>
+                </div>
+
+                <div class="grid-2" style="margin-top: 2rem;">
+                    <div class="card">
+                        <h2>Orders Requiring Action</h2>
+                        <ul class="activity-list">
+                            <li><span>#ORD-00130</span> <span class="status status-pending">Pending Delivery</span></li>
+                            <li><span>#ORD-00128</span> <span class="status status-pending">Pending Delivery</span></li>
+                            <li><span>#ORD-00125</span> <span class="status status-pending">Payment Confirmation</span></li>
+                            <li><span>#ORD-00124</span> <span class="status status-pending">Awaiting Stock</span></li>
+                        </ul>
+                    </div>
+                     <div class="card">
+                        <h2>Recent Partner Signups</h2>
+                        <ul class="activity-list">
+                           <li><span>David Lee</span> <span>Sep 29, 2025</span></li>
+                           <li><span>Amanda Chen</span> <span>Sep 28, 2025</span></li>
+                           <li><span>Robert Garcia</span> <span>Sep 26, 2025</span></li>
+                           <li><span>Jessica Kim</span> <span>Sep 25, 2025</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>

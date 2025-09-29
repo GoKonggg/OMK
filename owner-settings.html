@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Omaku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="owner-dashboard.html" class="logo">OM<span>A</span>KU</a>
+            </div>
+            <ul class="sidebar-nav">
+                <li><a href="owner-dashboard.html">Dashboard</a></li>
+                <li><a href="owner-pipeline.html">Sales Pipeline</a></li>
+                <li><a href="owner-surat-jalan.html">Surat Jalan</a></li>
+                <li><a href="owner-partners.html">Partners</a></li>
+                <li><a href="owner-analytics.html">Analytics</a></li>
+                <li><a href="owner-settings.html" class="active">Settings</a></li>
+            </ul>
+        </aside>
+
+        <div class="main-content">
+            <header class="app-header">
+                <h1>Settings</h1>
+                <div class="user-profile">
+                    <span>Welcome, Admin!</span>
+                </div>
+            </header>
+
+            <main class="content-body">
+                <div class="card profile-section">
+                    <h2>Admin Profile</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" value="Admin User" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" value="admin@omaku.com" disabled>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Profile</button>
+                    </form>
+                </div>
+
+                <div class="card profile-section">
+                    <h2>Change Your Password</h2>
+                     <form>
+                        <div class="form-group">
+                            <label for="current-password">Current Password</label>
+                            <input type="password" id="current-password" name="current-password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="new-password">New Password</label>
+                            <input type="password" id="new-password" name="new-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update Password</button>
+                    </form>
+                </div>
+
+                <div class="card profile-section">
+                    <h2>Platform Settings</h2>
+                     <form>
+                        <div class="form-group">
+                            <label for="company-name">Company Name</label>
+                            <input type="text" id="company-name" name="company-name" value="Omaku Inc.">
+                        </div>
+                        <div class="form-group">
+                            <label for="commission-rate">Default Commission Rate (%)</label>
+                            <input type="number" id="commission-rate" name="commission-rate" value="10">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Platform Settings</button>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>

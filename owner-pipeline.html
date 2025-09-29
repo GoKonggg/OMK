@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Pipeline - Omaku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="owner-dashboard.html" class="logo">OM<span>A</span>KU</a>
+            </div>
+            <ul class="sidebar-nav">
+                <li><a href="owner-dashboard.html">Dashboard</a></li>
+                <li><a href="owner-pipeline.html" class="active">Sales Pipeline</a></li>
+                <li><a href="owner-surat-jalan.html">Surat Jalan</a></li>
+                <li><a href="owner-partners.html">Partners</a></li>
+                <li><a href="owner-analytics.html">Analytics</a></li>
+                <li><a href="owner-settings.html">Settings</a></li>
+            </ul>
+        </aside>
+
+        <div class="main-content">
+            <header class="app-header">
+                <h1>Sales Pipeline</h1>
+                <div class="user-profile">
+                    <span>Welcome, Admin!</span>
+                </div>
+            </header>
+
+            <main class="content-body">
+                <div class="pipeline-header">
+                    <h2>Manage Your Deals</h2>
+                    <button class="btn btn-primary">Add New Deal</button>
+                </div>
+
+                <div class="kanban-board">
+                    <div class="kanban-column">
+                        <div class="kanban-column-header col-leads">New Leads (3)</div>
+                        <div class="kanban-column-body">
+                            <div class="kanban-card">
+                                <div class="card-title">Interior Project for PT Maju Mundur</div>
+                                <div class="card-value">$5,000</div>
+                                <div class="card-meta">Assigned to: Partner A</div>
+                            </div>
+                            <div class="kanban-card">
+                                <div class="card-title">Reseller Furniture Batch #5</div>
+                                <div class="card-value">$12,000</div>
+                                <div class="card-meta">Assigned to: Partner B</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="kanban-column">
+                        <div class="kanban-column-header col-quotes">Quotes Sent (2)</div>
+                        <div class="kanban-column-body">
+                            <div class="kanban-card">
+                                <div class="card-title">Custom Kitchen Set Project</div>
+                                <div class="card-value">$8,500</div>
+                                <div class="card-meta">Assigned to: Partner C</div>
+                            </div>
+                             <div class="kanban-card">
+                                <div class="card-title">Office Furniture Supply</div>
+                                <div class="card-value">$22,000</div>
+                                <div class="card-meta">Assigned to: Partner A</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="kanban-column">
+                        <div class="kanban-column-header col-negotiation">Negotiation (1)</div>
+                        <div class="kanban-column-body">
+                            <div class="kanban-card">
+                                <div class="card-title">Hotel Lobby Renovation</div>
+                                <div class="card-value">$55,000</div>
+                                <div class="card-meta">Assigned to: Internal Team</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="kanban-column">
+                        <div class="kanban-column-header col-won">Won (4)</div>
+                        <div class="kanban-column-body">
+                            </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>
