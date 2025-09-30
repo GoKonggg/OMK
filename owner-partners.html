@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Partner Management - Omaku</title>
+    <script src="data.js"></script>
+    <script src="auth-guard.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,10 +19,13 @@
                 <li><a href="owner-dashboard.html">Dashboard</a></li>
                 <li><a href="owner-pipeline.html">Sales Pipeline</a></li>
                 <li><a href="owner-surat-jalan.html">Surat Jalan</a></li>
-                <li><a href="owner-partners.html" class="active">Partners</a></li>
+                <li><a href="#" class="active">Partners</a></li>
                 <li><a href="owner-analytics.html">Analytics</a></li>
                 <li><a href="owner-settings.html">Settings</a></li>
             </ul>
+            <div class="sidebar-logout">
+            <a href="#" id="logout-btn">Logout</a>
+        </div>
         </aside>
 
         <div class="main-content">
@@ -35,19 +40,19 @@
                 <div class="grid-4">
                     <div class="summary-card">
                         <div class="title">TOTAL ACTIVE PARTNERS</div>
-                        <div class="value">78</div>
+                        <div class="value" id="total-partners">0</div>
                     </div>
                     <div class="summary-card">
-                        <div class="title">REVENUE FROM PARTNERS (MONTH)</div>
-                        <div class="value">$18,430</div>
+                        <div class="title">REVENUE FROM PARTNERS</div>
+                        <div class="value" id="revenue-from-partners">$0</div>
                     </div>
                     <div class="summary-card">
                         <div class="title">TOP PARTNER</div>
-                        <div class="value">Michael Chen</div>
+                        <div class="value" id="top-partner-name">N/A</div>
                     </div>
                     <div class="summary-card">
                         <div class="title">NEW SIGNUPS (MONTH)</div>
-                        <div class="value">5</div>
+                        <div class="value" id="new-signups">0</div>
                     </div>
                 </div>
 
@@ -77,70 +82,16 @@
                                     <th>Actions</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="partner-info">
-                                            <img class="partner-avatar" src="https://api.dicebear.com/8.x/initials/svg?seed=Michael Chen" alt="avatar">
-                                            <span>Michael Chen</span>
-                                        </div>
-                                    </td>
-                                    <td>$18,550</td>
-                                    <td>$1,855</td>
-                                    <td><span class="status status-paid">Active</span></td>
-                                    <td class="action-buttons">
-                                        <a href="#" class="btn btn-secondary btn-sm">Details</a>
-                                    </td>
-                                </tr>
-                                 <tr>
-                                    <td>
-                                        <div class="partner-info">
-                                            <img class="partner-avatar" src="https://api.dicebear.com/8.x/initials/svg?seed=Jane Doe" alt="avatar">
-                                            <span>Jane Doe</span>
-                                        </div>
-                                    </td>
-                                    <td>$15,210</td>
-                                    <td>$1,521</td>
-                                    <td><span class="status status-paid">Active</span></td>
-                                    <td class="action-buttons">
-                                        <a href="#" class="btn btn-secondary btn-sm">Details</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="partner-info">
-                                            <img class="partner-avatar" src="https://api.dicebear.com/8.x/initials/svg?seed=David Lee" alt="avatar">
-                                            <span>David Lee</span>
-                                        </div>
-                                    </td>
-                                    <td>$14,980</td>
-                                    <td>$1,498</td>
-                                    <td><span class="status status-inactive">Inactive</span></td>
-                                     <td class="action-buttons">
-                                        <a href="#" class="btn btn-secondary btn-sm">Details</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                     <td>
-                                        <div class="partner-info">
-                                            <img class="partner-avatar" src="https://api.dicebear.com/8.x/initials/svg?seed=Sarah Wilson" alt="avatar">
-                                            <span>Sarah Wilson</span>
-                                        </div>
-                                    </td>
-                                    <td>$12,800</td>
-                                    <td>$1,280</td>
-                                    <td><span class="status status-paid">Active</span></td>
-                                     <td class="action-buttons">
-                                        <a href="#" class="btn btn-secondary btn-sm">Details</a>
-                                    </td>
-                                </tr>
-                            </tbody>
+                            <tbody id="partners-table-body">
+                                </tbody>
                         </table>
                     </div>
                 </div>
             </main>
         </div>
     </div>
-
+    
+    <script src="owner-partners-script.js"></script>
+    <script src="logout.js"></script>
 </body>
 </html>

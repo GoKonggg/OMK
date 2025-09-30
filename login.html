@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In - Omaku</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="data.js"></script>
+    <script src="auth-guard.js"></script> <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
@@ -15,8 +16,8 @@
             <p>For demo purposes, please select a role to continue.</p>
 
             <div class="login-options">
-                <a href="partner-dashboard.html" class="btn btn-primary">Log In as Partner</a>
-                <a href="owner-dashboard.html" class="btn btn-secondary">Log In as Owner</a>
+                <button id="login-partner-btn" class="btn btn-primary">Log In as Partner</button>
+                <button id="login-owner-btn" class="btn btn-secondary">Log In as Owner</button>
             </div>
 
             <div class="extra-link" style="margin-top: 2rem;">
@@ -25,5 +26,5 @@
         </div>
     </div>
     
-    </body>
+    <script src="login-script.js"></script> </body>
 </html>

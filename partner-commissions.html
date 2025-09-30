@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Commissions - Omaku</title>
+    <script src="data.js"></script>
+    <script src="auth-guard.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,18 +17,21 @@
             </div>
             <ul class="sidebar-nav">
                 <li><a href="partner-dashboard.html">Dashboard</a></li>
-                <li><a href="partner-commissions.html" class="active">Commissions</a></li>
+                <li><a href="#" class="active">Commissions</a></li>
                 <li><a href="partner-leaderboard.html">Leaderboard</a></li>
                 <li><a href="partner-tools.html">Tools</a></li>
                 <li><a href="partner-profile.html">Profile</a></li>
             </ul>
+            <div class="sidebar-logout">
+                <a href="#" id="logout-btn">Logout</a>
+            </div>
         </aside>
 
         <div class="main-content">
             <header class="app-header">
                 <h1>My Commissions</h1>
                 <div class="user-profile">
-                    <span>Welcome, Partner!</span>
+                    <span id="welcome-message">Welcome, Partner!</span>
                 </div>
             </header>
 
@@ -34,89 +39,45 @@
                 <div class="grid-4">
                     <div class="summary-card">
                         <div class="title">TOTAL PAID</div>
-                        <div class="value">$1,250.75</div>
+                        <div class="value" id="total-paid-value">$0.00</div>
                     </div>
                     <div class="summary-card">
                         <div class="title">PENDING PAYOUT</div>
-                        <div class="value">$300.00</div>
+                        <div class="value" id="pending-payout-value">$0.00</div>
                     </div>
                     <div class="summary-card">
                         <div class="title">TOTAL ORDERS</div>
-                        <div class="value">28</div>
+                        <div class="value" id="total-orders-value">0</div>
                     </div>
                     <div class="summary-card">
                         <div class="title">NEXT PAYOUT</div>
-                        <div class="value">Oct 15</div>
+                        <div class="value" id="next-payout-value">N/A</div>
                     </div>
                 </div>
 
                 <div class="card" style="margin-top: 2rem;">
                     <h2>Commission History</h2>
-                    <div class="filters">
-                        <input type="date" name="start_date">
-                        <input type="date" name="end_date">
-                        <select name="status">
-                            <option value="">All Statuses</option>
-                            <option value="paid">Paid</option>
-                            <option value="pending">Pending</option>
-                            <option value="cancelled">Cancelled</option>
-                        </select>
-                    </div>
-
                     <div class="table-container">
                         <table class="data-table">
                             <thead>
                                 <tr>
-                                    <th>Order ID</th>
+                                    <th>Deal ID</th>
                                     <th>Date</th>
                                     <th>Order Value</th>
                                     <th>Commission</th>
                                     <th>Status</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>#ORD-00124</td>
-                                    <td>Sep 28, 2025</td>
-                                    <td>$500.00</td>
-                                    <td>$50.00</td>
-                                    <td><span class="status status-paid">Paid</span></td>
-                                </tr>
-                                <tr>
-                                    <td>#ORD-00128</td>
-                                    <td>Sep 29, 2025</td>
-                                    <td>$1,200.00</td>
-                                    <td>$120.00</td>
-                                    <td><span class="status status-pending">Pending</span></td>
-                                </tr>
-                                <tr>
-                                    <td>#ORD-00130</td>
-                                    <td>Sep 30, 2025</td>
-                                    <td>$800.00</td>
-                                    <td>$80.00</td>
-                                    <td><span class="status status-pending">Pending</span></td>
-                                </tr>
-                                 <tr>
-                                    <td>#ORD-00115</td>
-                                    <td>Sep 25, 2025</td>
-                                    <td>$350.00</td>
-                                    <td>$35.00</td>
-                                    <td><span class="status status-paid">Paid</span></td>
-                                </tr>
-                                <tr>
-                                    <td>#ORD-00112</td>
-                                    <td>Sep 22, 2025</td>
-                                    <td>$400.00</td>
-                                    <td>$40.00</td>
-                                    <td><span class="status status-cancelled">Cancelled</span></td>
-                                </tr>
-                            </tbody>
+                            <tbody id="commissions-tbody">
+                                </tbody>
                         </table>
                     </div>
                 </div>
             </main>
         </div>
     </div>
-
+    
+    <script src="partner-commissions-script.js"></script>
+    <script src="logout.js"></script>
 </body>
 </html>

@@ -918,3 +918,77 @@ body {
     width: 100%;
     padding: 14px;
 }
+
+/* === MODAL STYLING === */
+.modal {
+    display: none; /* Disembunyikan secara default */
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.is-open {
+    display: flex; /* Ditampilkan saat aktif */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.modal-close {
+    color: #aaa;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: black;
+}
+
+/* === LOGOUT BUTTON STYLING === */
+/* Membuat sidebar menjadi flex container untuk mendorong tombol logout ke bawah */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-nav {
+    flex-grow: 1; /* Membuat daftar navigasi memenuhi ruang yang tersedia */
+}
+
+.sidebar-logout a {
+    display: block;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid #495057; /* Garis pemisah */
+    color: #adb5bd;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-logout a:hover {
+    background-color: #dc3545; /* Warna merah omaku-red */
+    color: white;
+}

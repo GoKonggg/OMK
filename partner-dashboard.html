@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Partner Dashboard - Omaku</title>
+    <script src="data.js"></script>
+    <script src="auth-guard.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,19 +16,22 @@
                 <a href="#" class="logo">OM<span>A</span>KU</a>
             </div>
             <ul class="sidebar-nav">
-                <li><a href="partner-dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="#" class="active">Dashboard</a></li>
                 <li><a href="partner-commissions.html">Commissions</a></li>
                 <li><a href="partner-leaderboard.html">Leaderboard</a></li>
                 <li><a href="partner-tools.html">Tools</a></li>
                 <li><a href="partner-profile.html">Profile</a></li>
             </ul>
+            <div class="sidebar-logout">
+                <a href="#" id="logout-btn">Logout</a>
+            </div>
         </aside>
 
         <div class="main-content">
             <header class="app-header">
                 <h1>Dashboard</h1>
                 <div class="user-profile">
-                    <span>Welcome, Partner!</span>
+                    <span id="welcome-message">Welcome, Partner!</span>
                 </div>
             </header>
 
@@ -34,23 +39,23 @@
                 <div class="grid-4">
                     <div class="summary-card">
                         <div class="title">TOTAL EARNINGS</div>
-                        <div class="value">$1,250.75</div>
-                        <div class="detail">+ $150 this month</div>
+                        <div class="value" id="total-earnings-value">$0.00</div>
+                        <div class="detail" id="total-earnings-detail"></div>
                     </div>
                     <div class="summary-card">
                         <div class="title">PENDING COMMISSIONS</div>
-                        <div class="value">$300.00</div>
-                        <div class="detail">2 upcoming payouts</div>
+                        <div class="value" id="pending-commissions-value">$0.00</div>
+                        <div class="detail" id="pending-commissions-detail"></div>
                     </div>
                     <div class="summary-card">
                         <div class="title">LEADS GENERATED</div>
-                        <div class="value">42</div>
-                        <div class="detail">+ 5 this week</div>
+                        <div class="value" id="leads-generated-value">0</div>
+                        <div class="detail" id="leads-generated-detail"></div>
                     </div>
                     <div class="summary-card">
                         <div class="title">CONVERSION RATE</div>
-                        <div class="value">15%</div>
-                        <div class="detail">+ 1.2% from last month</div>
+                        <div class="value" id="conversion-rate-value">0%</div>
+                        <div class="detail" id="conversion-rate-detail"></div>
                     </div>
                 </div>
 
@@ -62,5 +67,7 @@
         </div>
     </div>
 
+    <script src="partner-dashboard-script.js"></script>
+    <script src="logout.js"></script>
 </body>
 </html>

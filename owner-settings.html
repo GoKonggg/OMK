@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings - Omaku</title>
+    <script src="data.js"></script>
+    <script src="auth-guard.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,8 +21,11 @@
                 <li><a href="owner-surat-jalan.html">Surat Jalan</a></li>
                 <li><a href="owner-partners.html">Partners</a></li>
                 <li><a href="owner-analytics.html">Analytics</a></li>
-                <li><a href="owner-settings.html" class="active">Settings</a></li>
+                <li><a href="#" class="active">Settings</a></li>
             </ul>
+            <div class="sidebar-logout">
+                <a href="#" id="logout-btn">Logout</a>
+            </div>
         </aside>
 
         <div class="main-content">
@@ -37,11 +42,11 @@
                     <form>
                         <div class="form-group">
                             <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" value="Admin User" required>
+                            <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" value="admin@omaku.com" disabled>
+                            <input type="email" id="email" name="email" disabled>
                         </div>
                         <button type="submit" class="btn btn-primary">Save Profile</button>
                     </form>
@@ -80,5 +85,7 @@
         </div>
     </div>
 
+    <script src="owner-settings-script.js"></script>
+    <script src="logout.js"></script>
 </body>
 </html>

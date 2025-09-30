@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leaderboard - Omaku</title>
+    <script src="data.js"></script>
+    <script src="auth-guard.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,6 +22,9 @@
                 <li><a href="partner-tools.html">Tools</a></li>
                 <li><a href="partner-profile.html">Profile</a></li>
             </ul>
+            <div class="sidebar-logout">
+            <a href="#" id="logout-btn">Logout</a>
+        </div>
         </aside>
 
         <div class="main-content">
@@ -31,18 +36,8 @@
             </header>
 
             <main class="content-body">
-                <div class="leaderboard-filters">
-                    <div class="filter-btn-group">
-                        <a href="#" class="btn btn-secondary active">This Month</a>
-                        <a href="#" class="btn btn-secondary">All Time</a>
+                <div id="top-performers-container" class="top-performers-container" style="min-height: 250px;">
                     </div>
-                    <select name="category">
-                        <option value="sales">By Sales Volume</option>
-                        <option value="leads">By New Leads</option>
-                    </select>
-                </div>
-                
-                <div id="top-performers-container" class="top-performers-container"></div>
 
                 <div class="card">
                     <h2>Full Rankings</h2>
@@ -56,7 +51,8 @@
                                     <th>Leads</th>
                                 </tr>
                             </thead>
-                            <tbody id="leaderboard-tbody"></tbody>
+                            <tbody id="leaderboard-tbody">
+                                </tbody>
                         </table>
                     </div>
                 </div>
@@ -66,5 +62,6 @@
     </div>
 
     <script src="leaderboard-script.js"></script>
+    <script src="logout.js"></script>
 </body>
 </html>
