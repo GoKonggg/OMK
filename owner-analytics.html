@@ -6,15 +6,14 @@
     <title>Analytics - Omaku</title>
     <script src="data.js"></script>
     <script src="auth-guard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <div class="app-layout">
         <aside class="sidebar">
-            <div class="sidebar-header">
-                <a href="owner-dashboard.html" class="logo">OM<span>A</span>KU</a>
-            </div>
+            <div class="sidebar-header"><a href="owner-dashboard.html" class="logo">OM<span>A</span>KU</a></div>
             <ul class="sidebar-nav">
                 <li><a href="owner-dashboard.html">Dashboard</a></li>
                 <li><a href="owner-pipeline.html">Sales Pipeline</a></li>
@@ -23,28 +22,26 @@
                 <li><a href="#" class="active">Analytics</a></li>
                 <li><a href="owner-settings.html">Settings</a></li>
             </ul>
-            <div class="sidebar-logout">
-            <a href="#" id="logout-btn">Logout</a>
-            </div>
         </aside>
 
         <div class="main-content">
             <header class="app-header">
                 <h1>Analytics & Reports</h1>
-                <div class="user-profile">
-                    <span>Welcome, Admin!</span>
-                </div>
+                <div class="user-profile"><span>Welcome, Admin!</span></div>
             </header>
 
             <main class="content-body">
-                <div class="analytics-header">
-                    <h2>Business Performance</h2>
-                </div>
-
                 <div class="card">
-                    <h2>Revenue Over Time (USD)</h2>
-                    <div class="chart-placeholder">
-                        <img id="revenue-chart" src="" alt="Revenue Chart" style="max-width: 100%;">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-bold">Revenue Over Time (USD)</h2>
+                        <div id="chart-filter-group" class="filter-btn-group inline-flex rounded-lg shadow-sm">
+                            <button data-range="all" class="btn btn-secondary active">All Month</button>
+                            <button data-range="first" class="btn btn-secondary">First Half</button>
+                            <button data-range="second" class="btn btn-secondary">Second Half</button>
+                        </div>
+                    </div>
+                    <div style="height: 350px;">
+                        <canvas id="revenueChartCanvas"></canvas>
                     </div>
                 </div>
 
@@ -54,20 +51,15 @@
                         <div class="table-container">
                             <table class="data-table">
                                 <thead>
-                                    <tr>
-                                        <th>Partner Name</th>
-                                        <th>Sales (Month)</th>
-                                    </tr>
+                                    <tr><th>Partner Name</th><th>Sales (Month)</th></tr>
                                 </thead>
-                                <tbody id="top-partners-tbody">
-                                    </tbody>
+                                <tbody id="top-partners-tbody"></tbody>
                             </table>
                         </div>
                     </div>
                     <div class="card">
                         <h2>Sales Funnel Conversion</h2>
-                         <ul id="funnel-conversion-list" class="activity-list">
-                            </ul>
+                         <ul id="funnel-conversion-list" class="activity-list"></ul>
                     </div>
                 </div>
             </main>
@@ -75,6 +67,5 @@
     </div>
 
     <script src="owner-analytics-script.js"></script>
-    <script src = "logout.js"></script>
 </body>
 </html>
